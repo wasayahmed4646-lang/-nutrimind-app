@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriMind AI — Smart Food Decision Assistant</title>
+    <meta name="description" content="A context-aware, behavior-driven food and health assistant that helps you build healthier eating habits.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 class="logo">NutriMind <span>AI</span></h1>
+            <p class="subtitle">Smart Food Decision Assistant</p>
+        </header>
+
+        <main>
+            <!-- ═══════ DASHBOARD ═══════ -->
+            <section class="dashboard card" id="dashboard-section">
+                <div class="dashboard-header">
+                    <h2>📊 Your Dashboard</h2>
+                    <div class="streak-badge" id="streak-badge">🔥 <span id="streak-count">0</span> Day Streak</div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-meals-today">0</span>
+                        <span class="stat-label">Meals Today</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-avg-score">—</span>
+                        <span class="stat-label">Avg Score</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-healthy-pct">—</span>
+                        <span class="stat-label">Healthy %</span>
+                    </div>
+                </div>
+
+                <div id="future-you-banner" class="future-you-banner">
+                    <h3>🔮 Future You Insight</h3>
+                    <p id="future-you-text">Log at least 3 meals to unlock your personalized health trajectory.</p>
+                </div>
+
+                <div id="micro-suggestion" class="micro-suggestion hidden">
+                    <p id="micro-suggestion-text"></p>
+                </div>
+            </section>
+
+            <!-- ═══════ MEAL INPUT ═══════ -->
+            <section class="input-section card">
+                <h2>🍽️ Log a Meal</h2>
+
+                <!-- Quick Pick Buttons -->
+                <div class="quick-picks">
+                    <span class="quick-label">Quick Pick:</span>
+                    <button class="quick-btn" onclick="setFood('Pizza')">🍕 Pizza</button>
+                    <button class="quick-btn" onclick="setFood('Salad')">🥗 Salad</button>
+                    <button class="quick-btn" onclick="setFood('Burger')">🍔 Burger</button>
+                    <button class="quick-btn" onclick="setFood('Apple')">🍎 Apple</button>
+                    <button class="quick-btn" onclick="setFood('Rice')">🍚 Rice</button>
+                    <button class="quick-btn" onclick="setFood('Ice Cream')">🍦 Ice Cream</button>
+                </div>
+
+                <form id="food-form">
+                    <div class="input-group">
+                        <label for="food-input">What are you eating?</label>
+                        <input type="text" id="food-input" placeholder="e.g., Pizza, Salad, Grilled Chicken..." required autocomplete="off">
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group half">
+                            <label for="meal-type">Meal Type</label>
+                            <select id="meal-type">
+                                <option value="Breakfast">🌅 Breakfast</option>
+                                <option value="Lunch">☀️ Lunch</option>
+                                <option value="Dinner">🌙 Dinner</option>
+                                <option value="Snack">🍿 Snack</option>
+                            </select>
+                        </div>
+                        <div class="input-group half">
+                            <label for="goal-select">Your Goal</label>
+                            <select id="goal-select">
+                                <option value="Maintain Health">💚 Maintain Health</option>
+                                <option value="Weight Loss">🔥 Weight Loss</option>
+                                <option value="Muscle Gain">💪 Muscle Gain</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>How are you feeling right now?</label>
+                        <div class="mood-selector">
+                            <label class="mood-option">
+                                <input type="radio" name="mood" value="Happy" required>
+                                <span class="mood-btn">😊 Happy</span>
+                            </label>
+                            <label class="mood-option">
+                                <input type="radio" name="mood" value="Stressed">
+                                <span class="mood-btn">😫 Stressed</span>
+                            </label>
+                            <label class="mood-option">
+                                <input type="radio" name="mood" value="Tired">
+                                <span class="mood-btn">😴 Tired</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="time-indicator">
+                        <span id="time-icon">☀️</span> Detected: <strong id="time-label">Afternoon</strong>
+                    </div>
+
+                    <button type="submit" class="submit-btn">⚡ Analyze Meal</button>
+                </form>
+            </section>
+
+            <!-- ═══════ RESULTS ═══════ -->
+            <section id="results-section" class="results-section card hidden">
+                <h2>📋 Analysis Result</h2>
+
+                <div class="score-container">
+                    <div class="score-ring" id="score-ring">
+                        <div class="score-circle">
+                            <span class="score-number" id="health-score">0</span>
+                            <span class="score-label">/ 100</span>
+                        </div>
+                    </div>
+                    <p class="score-verdict" id="score-verdict"></p>
+                </div>
+
+                <div class="insights-grid">
+                    <div class="insight-card behavior-card">
+                        <h3>🧠 Behavior Insight</h3>
+                        <p id="behavior-insight-text"></p>
+                    </div>
+
+                    <div class="insight-card alternatives-card">
+                        <h3>💡 Smarter Alternatives</h3>
+                        <ul id="alternatives-list"></ul>
+                    </div>
+
+                    <div class="insight-card goal-card">
+                        <h3>🎯 Goal Feedback</h3>
+                        <p id="goal-feedback-text"></p>
+                    </div>
+
+                    <div class="insight-card tip-card">
+                        <h3>✨ Pro Tip</h3>
+                        <p id="pro-tip-text"></p>
+                    </div>
+                </div>
+
+                <button id="save-meal-btn" class="save-btn">✅ Log This Meal</button>
+            </section>
+
+            <!-- ═══════ TODAY'S LOG ═══════ -->
+            <section class="history-section card">
+                <h2>📝 Today's Log</h2>
+                <div id="history-list" class="history-list">
+                    <!-- Populated by JS -->
+                </div>
+                <button id="clear-history-btn" class="clear-btn hidden">🗑️ Clear All History</button>
+            </section>
+
+            <!-- ═══════ FIND & ORDER FOOD ═══════ -->
+            <section class="restaurant-section card">
+                <h2>🍽️ Find & Order Food</h2>
+                <p class="restaurant-desc">Search for healthy restaurants nearby or order directly from your favorite apps.</p>
+
+                <div class="input-group">
+                    <input type="text" id="restaurant-search" placeholder="Search food or restaurant...">
+                </div>
+
+                <div class="restaurant-buttons">
+                    <button class="order-btn maps-btn" id="maps-btn">
+                        <span class="order-icon">📍</span>
+                        <span class="order-text">Find Nearby</span>
+                    </button>
+                    <button class="order-btn zomato-btn" id="zomato-btn">
+                        <span class="order-icon">🍴</span>
+                        <span class="order-text">Order on Zomato</span>
+                    </button>
+                    <button class="order-btn swiggy-btn" id="swiggy-btn">
+                        <span class="order-icon">🚚</span>
+                        <span class="order-text">Order on Swiggy</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>NutriMind AI — Built for smarter eating 🧠</p>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
