@@ -4,34 +4,34 @@
 
 const foodDatabase = [
     // Healthy (base score 75-95)
-    { name: "salad",     baseScore: 92, type: "healthy",   category: "vegetable", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
-    { name: "apple",     baseScore: 90, type: "healthy",   category: "fruit",     alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
-    { name: "chicken",   baseScore: 85, type: "healthy",   category: "protein",   alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
-    { name: "fish",      baseScore: 90, type: "healthy",   category: "protein",   alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
-    { name: "oatmeal",   baseScore: 88, type: "healthy",   category: "grain",     alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
-    { name: "yogurt",    baseScore: 82, type: "healthy",   category: "dairy",     alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
-    { name: "eggs",      baseScore: 84, type: "healthy",   category: "protein",   alternatives: ["Egg white omelette", "Boiled eggs with toast", "Tofu scramble"] },
-    { name: "banana",    baseScore: 88, type: "healthy",   category: "fruit",     alternatives: ["Mixed fruit plate", "Banana smoothie", "Apple slices"] },
+    { name: "salad", baseScore: 92, type: "healthy", category: "vegetable", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
+    { name: "apple", baseScore: 90, type: "healthy", category: "fruit", alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
+    { name: "chicken", baseScore: 85, type: "healthy", category: "protein", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
+    { name: "fish", baseScore: 90, type: "healthy", category: "protein", alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
+    { name: "oatmeal", baseScore: 88, type: "healthy", category: "grain", alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
+    { name: "yogurt", baseScore: 82, type: "healthy", category: "dairy", alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
+    { name: "eggs", baseScore: 84, type: "healthy", category: "protein", alternatives: ["Egg white omelette", "Boiled eggs with toast", "Tofu scramble"] },
+    { name: "banana", baseScore: 88, type: "healthy", category: "fruit", alternatives: ["Mixed fruit plate", "Banana smoothie", "Apple slices"] },
 
     // Neutral (base score 40-74)
-    { name: "rice",      baseScore: 60, type: "neutral",   category: "grain",     alternatives: ["Brown rice", "Quinoa", "Cauliflower rice"] },
-    { name: "pasta",     baseScore: 50, type: "neutral",   category: "grain",     alternatives: ["Zucchini noodles", "Whole wheat pasta", "Lentil pasta"] },
-    { name: "bread",     baseScore: 55, type: "neutral",   category: "grain",     alternatives: ["Whole grain bread", "Sourdough", "Lettuce wraps"] },
-    { name: "sandwich",  baseScore: 55, type: "neutral",   category: "mixed",     alternatives: ["Lettuce wrap", "Whole grain sandwich", "Veggie wrap"] },
+    { name: "rice", baseScore: 60, type: "neutral", category: "grain", alternatives: ["Brown rice", "Quinoa", "Cauliflower rice"] },
+    { name: "pasta", baseScore: 50, type: "neutral", category: "grain", alternatives: ["Zucchini noodles", "Whole wheat pasta", "Lentil pasta"] },
+    { name: "bread", baseScore: 55, type: "neutral", category: "grain", alternatives: ["Whole grain bread", "Sourdough", "Lettuce wraps"] },
+    { name: "sandwich", baseScore: 55, type: "neutral", category: "mixed", alternatives: ["Lettuce wrap", "Whole grain sandwich", "Veggie wrap"] },
 
     // Unhealthy (base score 5-39)
-    { name: "pizza",     baseScore: 30, type: "unhealthy", category: "junk",      alternatives: ["Cauliflower crust pizza", "Whole wheat flatbread", "Veggie pita"] },
-    { name: "burger",    baseScore: 28, type: "unhealthy", category: "junk",      alternatives: ["Turkey burger", "Veggie burger", "Grilled chicken wrap"] },
-    { name: "fries",     baseScore: 18, type: "unhealthy", category: "junk",      alternatives: ["Baked sweet potato fries", "Side salad", "Roasted veggies"] },
-    { name: "ice cream", baseScore: 15, type: "unhealthy", category: "dessert",   alternatives: ["Greek yogurt with berries", "Frozen banana", "Dark chocolate"] },
-    { name: "donut",     baseScore: 12, type: "unhealthy", category: "dessert",   alternatives: ["Oatmeal with fruit", "Whole grain toast", "Granola bar"] },
-    { name: "soda",      baseScore: 5,  type: "unhealthy", category: "drink",     alternatives: ["Sparkling water with lemon", "Green tea", "Coconut water"] },
-    { name: "chips",     baseScore: 15, type: "unhealthy", category: "snack",     alternatives: ["Air-popped popcorn", "Mixed nuts", "Veggie sticks"] },
-    { name: "cake",      baseScore: 12, type: "unhealthy", category: "dessert",   alternatives: ["Fresh fruit plate", "Dark chocolate", "Yogurt parfait"] },
-    { name: "noodles",   baseScore: 40, type: "neutral",   category: "grain",     alternatives: ["Soba noodles", "Zucchini noodles", "Rice paper rolls"] },
-    { name: "biryani",   baseScore: 45, type: "neutral",   category: "mixed",     alternatives: ["Quinoa pulao", "Brown rice biryani", "Grilled chicken with veggies"] },
-    { name: "samosa",    baseScore: 22, type: "unhealthy", category: "snack",     alternatives: ["Baked samosa", "Sprout chaat", "Roasted chickpeas"] },
-    { name: "chocolate", baseScore: 20, type: "unhealthy", category: "dessert",   alternatives: ["Dark chocolate (85%+)", "Trail mix", "Fresh berries"] },
+    { name: "pizza", baseScore: 30, type: "unhealthy", category: "junk", alternatives: ["Cauliflower crust pizza", "Whole wheat flatbread", "Veggie pita"] },
+    { name: "burger", baseScore: 28, type: "unhealthy", category: "junk", alternatives: ["Turkey burger", "Veggie burger", "Grilled chicken wrap"] },
+    { name: "fries", baseScore: 18, type: "unhealthy", category: "junk", alternatives: ["Baked sweet potato fries", "Side salad", "Roasted veggies"] },
+    { name: "ice cream", baseScore: 15, type: "unhealthy", category: "dessert", alternatives: ["Greek yogurt with berries", "Frozen banana", "Dark chocolate"] },
+    { name: "donut", baseScore: 12, type: "unhealthy", category: "dessert", alternatives: ["Oatmeal with fruit", "Whole grain toast", "Granola bar"] },
+    { name: "soda", baseScore: 5, type: "unhealthy", category: "drink", alternatives: ["Sparkling water with lemon", "Green tea", "Coconut water"] },
+    { name: "chips", baseScore: 15, type: "unhealthy", category: "snack", alternatives: ["Air-popped popcorn", "Mixed nuts", "Veggie sticks"] },
+    { name: "cake", baseScore: 12, type: "unhealthy", category: "dessert", alternatives: ["Fresh fruit plate", "Dark chocolate", "Yogurt parfait"] },
+    { name: "noodles", baseScore: 40, type: "neutral", category: "grain", alternatives: ["Soba noodles", "Zucchini noodles", "Rice paper rolls"] },
+    { name: "biryani", baseScore: 45, type: "neutral", category: "mixed", alternatives: ["Quinoa pulao", "Brown rice biryani", "Grilled chicken with veggies"] },
+    { name: "samosa", baseScore: 22, type: "unhealthy", category: "snack", alternatives: ["Baked samosa", "Sprout chaat", "Roasted chickpeas"] },
+    { name: "chocolate", baseScore: 20, type: "unhealthy", category: "dessert", alternatives: ["Dark chocolate (85%+)", "Trail mix", "Fresh berries"] },
 ];
 
 /**
@@ -106,51 +106,3 @@ function getFoodContext(foodQuery, mood, timeOfDay, goal, mealType) {
         }
     } else if (mood === "Happy") {
         insights.push("You're in a great mood — keep that positive momentum going!");
-    }
-
-    // ── Meal Type Context ──
-    if (mealType === "Snack" && food.type === "unhealthy") {
-        insights.push("Unhealthy snacking is one of the biggest hidden calorie traps.");
-    }
-    if (mealType === "Breakfast" && food.category === "dessert") {
-        score -= 10;
-        insights.push("Dessert for breakfast? That's a recipe for a sugar crash before noon.");
-    }
-
-    // ── Goal Context ──
-    let goalFeedback = "";
-    if (goal === "Weight Loss") {
-        if (food.type === "unhealthy") {
-            score -= 5;
-            goalFeedback = "This doesn't align with your weight loss goal. High-calorie foods slow progress — swap it for a lighter alternative.";
-        } else {
-            goalFeedback = "This fits well within a calorie-conscious diet. Keep making choices like this!";
-        }
-    } else if (goal === "Muscle Gain") {
-        if (food.category === "protein") {
-            score += 5;
-            goalFeedback = "Protein-rich — perfect for muscle recovery and growth!";
-        } else {
-            goalFeedback = "Consider pairing this with a protein source for better muscle gains.";
-        }
-    } else {
-        if (food.type === "healthy") {
-            goalFeedback = "Solid choice for overall health maintenance.";
-        } else if (food.type === "unhealthy") {
-            goalFeedback = "An occasional treat is fine, but don't make it a habit.";
-        } else {
-            goalFeedback = "Balanced choice — keep monitoring your portions.";
-        }
-    }
-
-    // Clamp
-    score = Math.max(0, Math.min(100, score));
-
-    return {
-        originalFood: food,
-        score: score,
-        insight: insights.join(" ") || "Looks like a reasonable choice. Watch your portions!",
-        goalFeedback: goalFeedback,
-        alternatives: food.alternatives
-    };
-}

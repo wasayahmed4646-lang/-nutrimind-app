@@ -1,0 +1,1 @@
+NutriMind AI is a context-aware web app that helps you build healthier eating habits. It evaluates your meals based on mood, time, and goals to provide a health score, behavioral insights, and smarter alternatives. Track daily streaks and predict your future health trajectory, all locally in your browser with zero backend needed!
