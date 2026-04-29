@@ -20,7 +20,7 @@ const foodDatabase = [
     { name: "sandwich", baseScore: 55, type: "neutral", category: "mixed", image: "https://loremflickr.com/400/400/meal,sandwich/all", alternatives: ["Lettuce wrap", "Whole grain sandwich", "Veggie wrap"] },
 
     // Unhealthy (base score 5-39)
-    { name: "pizza", baseScore: 30, type: "unhealthy", category: "junk", image: "https://loremflickr.com/400/400/meal,pizza/all", alternatives: ["Cauliflower crust pizza", "Whole wheat flatbread", "Veggie pita"] },
+    { name: "pizza", baseScore: 30, type: "unhealthy", category: "junk", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80", alternatives: ["Cauliflower crust pizza", "Whole wheat flatbread", "Veggie pita"] },
     { name: "burger", baseScore: 28, type: "unhealthy", category: "junk", image: "https://loremflickr.com/400/400/meal,burger/all", alternatives: ["Turkey burger", "Veggie burger", "Grilled chicken wrap"] },
     { name: "fries", baseScore: 18, type: "unhealthy", category: "junk", image: "https://loremflickr.com/400/400/meal,fries/all", alternatives: ["Baked sweet potato fries", "Side salad", "Roasted veggies"] },
     { name: "ice cream", baseScore: 15, type: "unhealthy", category: "dessert", image: "https://loremflickr.com/400/400/meal,ice%20cream/all", alternatives: ["Greek yogurt with berries", "Frozen banana", "Dark chocolate"] },
