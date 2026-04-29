@@ -4,34 +4,34 @@
 
 const foodDatabase = [
     // Healthy (base score 75-95)
-    { name: "salad", baseScore: 92, type: "healthy", category: "vegetable", image: "https://loremflickr.com/400/400/meal,salad/all", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
-    { name: "apple", baseScore: 90, type: "healthy", category: "fruit", image: "https://loremflickr.com/400/400/meal,apple/all", alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
-    { name: "chicken", baseScore: 85, type: "healthy", category: "protein", image: "https://loremflickr.com/400/400/meal,chicken/all", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
-    { name: "fish", baseScore: 90, type: "healthy", category: "protein", image: "https://loremflickr.com/400/400/meal,fish/all", alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
-    { name: "oatmeal", baseScore: 88, type: "healthy", category: "grain", image: "https://loremflickr.com/400/400/meal,oatmeal/all", alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
-    { name: "yogurt", baseScore: 82, type: "healthy", category: "dairy", image: "https://loremflickr.com/400/400/meal,yogurt/all", alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
-    { name: "eggs", baseScore: 84, type: "healthy", category: "protein", image: "https://loremflickr.com/400/400/meal,eggs/all", alternatives: ["Egg white omelette", "Boiled eggs with toast", "Tofu scramble"] },
-    { name: "banana", baseScore: 88, type: "healthy", category: "fruit", image: "https://loremflickr.com/400/400/meal,banana/all", alternatives: ["Mixed fruit plate", "Banana smoothie", "Apple slices"] },
+    { name: "salad", baseScore: 92, type: "healthy", category: "vegetable", image: "images/salad.png", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
+    { name: "apple", baseScore: 90, type: "healthy", category: "fruit", image: "images/apple.png", alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
+    { name: "chicken", baseScore: 85, type: "healthy", category: "protein", image: "images/chicken.png", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
+    { name: "fish", baseScore: 90, type: "healthy", category: "protein", image: "images/fish.png", alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
+    { name: "oatmeal", baseScore: 88, type: "healthy", category: "grain", image: "images/oatmeal.png", alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
+    { name: "yogurt", baseScore: 82, type: "healthy", category: "dairy", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80", alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
+    { name: "eggs", baseScore: 84, type: "healthy", category: "protein", image: "https://images.unsplash.com/photo-1521513919009-be90ad555598?auto=format&fit=crop&w=400&q=80", alternatives: ["Egg white omelette", "Boiled eggs with toast", "Tofu scramble"] },
+    { name: "banana", baseScore: 88, type: "healthy", category: "fruit", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=400&q=80", alternatives: ["Mixed fruit plate", "Banana smoothie", "Apple slices"] },
 
     // Neutral (base score 40-74)
-    { name: "rice", baseScore: 60, type: "neutral", category: "grain", image: "https://loremflickr.com/400/400/meal,rice/all", alternatives: ["Brown rice", "Quinoa", "Cauliflower rice"] },
-    { name: "pasta", baseScore: 50, type: "neutral", category: "grain", image: "https://loremflickr.com/400/400/meal,pasta/all", alternatives: ["Zucchini noodles", "Whole wheat pasta", "Lentil pasta"] },
-    { name: "bread", baseScore: 55, type: "neutral", category: "grain", image: "https://loremflickr.com/400/400/meal,bread/all", alternatives: ["Whole grain bread", "Sourdough", "Lettuce wraps"] },
-    { name: "sandwich", baseScore: 55, type: "neutral", category: "mixed", image: "https://loremflickr.com/400/400/meal,sandwich/all", alternatives: ["Lettuce wrap", "Whole grain sandwich", "Veggie wrap"] },
+    { name: "rice", baseScore: 60, type: "neutral", category: "grain", image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=400&q=80", alternatives: ["Brown rice", "Quinoa", "Cauliflower rice"] },
+    { name: "pasta", baseScore: 50, type: "neutral", category: "grain", image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=400&q=80", alternatives: ["Zucchini noodles", "Whole wheat pasta", "Lentil pasta"] },
+    { name: "bread", baseScore: 55, type: "neutral", category: "grain", image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80", alternatives: ["Whole grain bread", "Sourdough", "Lettuce wraps"] },
+    { name: "sandwich", baseScore: 55, type: "neutral", category: "mixed", image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=400&q=80", alternatives: ["Lettuce wrap", "Whole grain sandwich", "Veggie wrap"] },
 
     // Unhealthy (base score 5-39)
     { name: "pizza", baseScore: 30, type: "unhealthy", category: "junk", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80", alternatives: ["Cauliflower crust pizza", "Whole wheat flatbread", "Veggie pita"] },
-    { name: "burger", baseScore: 28, type: "unhealthy", category: "junk", image: "https://loremflickr.com/400/400/meal,burger/all", alternatives: ["Turkey burger", "Veggie burger", "Grilled chicken wrap"] },
-    { name: "fries", baseScore: 18, type: "unhealthy", category: "junk", image: "https://loremflickr.com/400/400/meal,fries/all", alternatives: ["Baked sweet potato fries", "Side salad", "Roasted veggies"] },
-    { name: "ice cream", baseScore: 15, type: "unhealthy", category: "dessert", image: "https://loremflickr.com/400/400/meal,ice%20cream/all", alternatives: ["Greek yogurt with berries", "Frozen banana", "Dark chocolate"] },
-    { name: "donut", baseScore: 12, type: "unhealthy", category: "dessert", image: "https://loremflickr.com/400/400/meal,donut/all", alternatives: ["Oatmeal with fruit", "Whole grain toast", "Granola bar"] },
-    { name: "soda", baseScore: 5, type: "unhealthy", category: "drink", image: "https://loremflickr.com/400/400/meal,soda/all", alternatives: ["Sparkling water with lemon", "Green tea", "Coconut water"] },
-    { name: "chips", baseScore: 15, type: "unhealthy", category: "snack", image: "https://loremflickr.com/400/400/meal,chips/all", alternatives: ["Air-popped popcorn", "Mixed nuts", "Veggie sticks"] },
-    { name: "cake", baseScore: 12, type: "unhealthy", category: "dessert", image: "https://loremflickr.com/400/400/meal,cake/all", alternatives: ["Fresh fruit plate", "Dark chocolate", "Yogurt parfait"] },
-    { name: "noodles", baseScore: 40, type: "neutral", category: "grain", image: "https://loremflickr.com/400/400/meal,noodles/all", alternatives: ["Soba noodles", "Zucchini noodles", "Rice paper rolls"] },
-    { name: "biryani", baseScore: 45, type: "neutral", category: "mixed", image: "https://loremflickr.com/400/400/meal,biryani/all", alternatives: ["Quinoa pulao", "Brown rice biryani", "Grilled chicken with veggies"] },
-    { name: "samosa", baseScore: 22, type: "unhealthy", category: "snack", image: "https://loremflickr.com/400/400/meal,samosa/all", alternatives: ["Baked samosa", "Sprout chaat", "Roasted chickpeas"] },
-    { name: "chocolate", baseScore: 20, type: "unhealthy", category: "dessert", image: "https://loremflickr.com/400/400/meal,chocolate/all", alternatives: ["Dark chocolate (85%+)", "Trail mix", "Fresh berries"] },
+    { name: "burger", baseScore: 28, type: "unhealthy", category: "junk", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80", alternatives: ["Turkey burger", "Veggie burger", "Grilled chicken wrap"] },
+    { name: "fries", baseScore: 18, type: "unhealthy", category: "junk", image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=400&q=80", alternatives: ["Baked sweet potato fries", "Side salad", "Roasted veggies"] },
+    { name: "ice cream", baseScore: 15, type: "unhealthy", category: "dessert", image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=400&q=80", alternatives: ["Greek yogurt with berries", "Frozen banana", "Dark chocolate"] },
+    { name: "donut", baseScore: 12, type: "unhealthy", category: "dessert", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80", alternatives: ["Oatmeal with fruit", "Whole grain toast", "Granola bar"] },
+    { name: "soda", baseScore: 5, type: "unhealthy", category: "drink", image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80", alternatives: ["Sparkling water with lemon", "Green tea", "Coconut water"] },
+    { name: "chips", baseScore: 15, type: "unhealthy", category: "snack", image: "https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=400&q=80", alternatives: ["Air-popped popcorn", "Mixed nuts", "Veggie sticks"] },
+    { name: "cake", baseScore: 12, type: "unhealthy", category: "dessert", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80", alternatives: ["Fresh fruit plate", "Dark chocolate", "Yogurt parfait"] },
+    { name: "noodles", baseScore: 40, type: "neutral", category: "grain", image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=400&q=80", alternatives: ["Soba noodles", "Zucchini noodles", "Rice paper rolls"] },
+    { name: "biryani", baseScore: 45, type: "neutral", category: "mixed", image: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?auto=format&fit=crop&w=400&q=80", alternatives: ["Quinoa pulao", "Brown rice biryani", "Grilled chicken with veggies"] },
+    { name: "samosa", baseScore: 22, type: "unhealthy", category: "snack", image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80", alternatives: ["Baked samosa", "Sprout chaat", "Roasted chickpeas"] },
+    { name: "chocolate", baseScore: 20, type: "unhealthy", category: "dessert", image: "https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=400&q=80", alternatives: ["Dark chocolate (85%+)", "Trail mix", "Fresh berries"] },
 ];
 
 /**
@@ -58,7 +58,7 @@ function getFoodContext(foodQuery, mood, timeOfDay, goal, mealType) {
             baseScore: 50,
             type: "neutral",
             category: "unknown",
-            image: `https://loremflickr.com/400/400/meal,${encodeURIComponent(foodQuery.trim())}/all`,
+            image: "https://images.unsplash.com/photo-1490818387583-1b0ba689a07a?auto=format&fit=crop&w=400&q=80",
             alternatives: ["Pair it with a green salad", "Drink a glass of water", "Add a piece of fresh fruit"]
         };
     }
