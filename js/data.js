@@ -4,7 +4,7 @@
 
 const foodDatabase = [
     // Healthy (base score 75-95)
-    { name: "salad", baseScore: 92, type: "healthy", category: "vegetable", image: "images/salad.png", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
+    { name: "salad", baseScore: 92, type: "healthy", category: "vegetable", image: "https://images.getrecipekit.com/20240905221054-pk-greek-salad-0214-min.jpg?aspect_ratio=16:9&quality=90&", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
     { name: "apple", baseScore: 90, type: "healthy", category: "fruit", image: "images/apple.png", alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
     { name: "chicken", baseScore: 85, type: "healthy", category: "protein", image: "images/chicken.png", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
     { name: "fish", baseScore: 90, type: "healthy", category: "protein", image: "images/fish.png", alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
