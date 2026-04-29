@@ -106,3 +106,48 @@ function getFoodContext(foodQuery, mood, timeOfDay, goal, mealType) {
         }
     } else if (mood === "Happy") {
         insights.push("You're in a great mood — keep that positive momentum going!");
+    }
+
+    // ── Goal Context ──
+    let goalFeedback = "";
+    if (goal === "Weight Loss") {
+        if (food.type === "unhealthy") {
+            goalFeedback = "This meal may hinder your weight loss. Consider a lower-calorie alternative.";
+        } else {
+            goalFeedback = "Great choice for weight loss! Keeps you full without excess calories.";
+        }
+    } else if (goal === "Muscle Gain") {
+        if (food.category === "protein" || food.type === "healthy") {
+            goalFeedback = "Excellent for muscle recovery and growth.";
+        } else {
+            goalFeedback = "Consider pairing this with a protein source to support muscle gain.";
+        }
+    } else if (goal === "More Energy") {
+        if (food.type === "unhealthy") {
+            goalFeedback = "This might cause an energy spike followed by a crash. Try complex carbs.";
+        } else {
+            goalFeedback = "Perfect for sustained, steady energy throughout the day.";
+        }
+    } else if (goal === "Better Sleep") {
+        if (timeOfDay === "Night" && food.type === "unhealthy") {
+            goalFeedback = "Heavy meals before bed can severely disrupt your sleep quality.";
+        } else {
+            goalFeedback = "A light choice that won't interfere with your rest.";
+        }
+    }
+
+    // ── Score Clamping ──
+    if (score > 100) score = 100;
+    if (score < 0) score = 0;
+
+    let finalInsight = insights.join(" ");
+    if (!finalInsight) finalInsight = "A balanced choice. Keep your overall day in mind.";
+
+    return {
+        originalFood: food,
+        score: score,
+        insight: finalInsight,
+        goalFeedback: goalFeedback || "Keep tracking to reach your goals.",
+        alternatives: food.alternatives || []
+    };
+}
