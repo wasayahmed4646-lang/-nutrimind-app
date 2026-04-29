@@ -137,6 +137,13 @@ form.addEventListener("submit", (e) => {
 function displayResults(data) {
     resultsSection.classList.remove("hidden");
 
+    // Set the image
+    const foodImage = document.getElementById("analyzed-food-image");
+    if (foodImage) {
+        foodImage.src = data.originalFood.image;
+        foodImage.alt = data.originalFood.name;
+    }
+
     // Animate score counter
     const target = data.score;
     let current = 0;

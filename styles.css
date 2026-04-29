@@ -453,9 +453,39 @@ button {
 /* ═══════ RESULTS ═══════ */
 .hidden { display: none !important; }
 
+.results-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.food-image-container {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+    border: 3px solid rgba(255,255,255,0.05);
+    background: var(--bg-main);
+    flex-shrink: 0;
+}
+
+#analyzed-food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#analyzed-food-image:hover {
+    transform: scale(1.05);
+}
+
 .score-container {
     text-align: center;
-    margin-bottom: 1.5rem;
 }
 
 .score-ring {
