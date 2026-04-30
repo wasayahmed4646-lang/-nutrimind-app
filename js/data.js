@@ -8,9 +8,9 @@ const foodDatabase = [
     { name: "apple", baseScore: 90, type: "healthy", category: "fruit", image: "https://hips.hearstapps.com/hmg-prod/images/apples-at-farmers-market-royalty-free-image-1627321463.jpg?crop=1.00xw:0.631xh;0.00160xw,0.206xh", alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
     { name: "chicken", baseScore: 85, type: "healthy", category: "protein", image: "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/roastchicken_90247_16x9.jpg", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
     { name: "fish", baseScore: 90, type: "healthy", category: "protein", image: "https://greatcurryrecipes.net/wp-content/uploads/2011/02/tandooriwholefish4.jpg.webp", alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
-    { name: "oatmeal", baseScore: 88, type: "healthy", category: "grain", image: "images/oatmeal.png", alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
-    { name: "yogurt", baseScore: 82, type: "healthy", category: "dairy", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80", alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
-    { name: "eggs", baseScore: 84, type: "healthy", category: "protein", image: "https://images.unsplash.com/photo-1521513919009-be90ad555598?auto=format&fit=crop&w=400&q=80", alternatives: ["Egg white omelette", "Boiled eggs with toast", "Tofu scramble"] },
+    { name: "oatmeal", baseScore: 88, type: "healthy", category: "grain", image: "https://feelgoodfoodie.net/wp-content/uploads/2025/07/Steel-Cut-Oatmeal-08.jpg", alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
+    { name: "yogurt", baseScore: 82, type: "healthy", category: "dairy", image: "https://static01.nyt.com/images/2018/07/18/dining/18YOGURT1/18YOGURT1-threeByTwoMediumAt2X.jpg?quality=75&auto=webp", alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
+    { name: "eggs", baseScore: 84, type: "healthy", category: "protein", image: "https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg?w=300", alternatives: ["Egg white omelette", "Boiled eggs with toast", "Tofu scramble"] },
     { name: "banana", baseScore: 88, type: "healthy", category: "fruit", image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=400&q=80", alternatives: ["Mixed fruit plate", "Banana smoothie", "Apple slices"] },
 
     // Neutral (base score 40-74)
