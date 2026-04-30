@@ -6,7 +6,7 @@ const foodDatabase = [
     // Healthy (base score 75-95)
     { name: "salad", baseScore: 92, type: "healthy", category: "vegetable", image: "https://images.getrecipekit.com/20240905221054-pk-greek-salad-0214-min.jpg?aspect_ratio=16:9&quality=90&", alternatives: ["Add grilled chicken for protein", "Use olive oil dressing", "Top with nuts & seeds"] },
     { name: "apple", baseScore: 90, type: "healthy", category: "fruit", image: "https://hips.hearstapps.com/hmg-prod/images/apples-at-farmers-market-royalty-free-image-1627321463.jpg?crop=1.00xw:0.631xh;0.00160xw,0.206xh", alternatives: ["Mixed fruit bowl", "Apple with almond butter", "Banana smoothie"] },
-    { name: "chicken", baseScore: 85, type: "healthy", category: "protein", image: "images/chicken.png", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
+    { name: "chicken", baseScore: 85, type: "healthy", category: "protein", image: "https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/roastchicken_90247_16x9.jpg", alternatives: ["Baked salmon", "Grilled tofu", "Turkey breast"] },
     { name: "fish", baseScore: 90, type: "healthy", category: "protein", image: "images/fish.png", alternatives: ["Grilled shrimp", "Lentil curry", "Chickpea bowl"] },
     { name: "oatmeal", baseScore: 88, type: "healthy", category: "grain", image: "images/oatmeal.png", alternatives: ["Overnight oats", "Quinoa porridge", "Muesli bowl"] },
     { name: "yogurt", baseScore: 82, type: "healthy", category: "dairy", image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80", alternatives: ["Greek yogurt with honey", "Coconut yogurt", "Smoothie bowl"] },
